@@ -64,40 +64,38 @@ document.querySelectorAll('.om__card').forEach((el, i) => {
 
 fadeEls.forEach(el => observer.observe(el));
 
-// --- CONTACT FORM ---
+// --- BOOKING FORM ---
 const form = document.getElementById('kontaktForm');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  const navn = form.querySelector('#navn').value.trim();
-  const epost = form.querySelector('#epost').value.trim();
+    const navn = form.querySelector('#navn').value.trim();
+    const kontaktinfoEl = form.querySelector('#kontaktinfo');
+    const kontaktinfo = kontaktinfoEl ? kontaktinfoEl.value.trim() : '';
 
-  if (!navn || !epost) {
-    showFormMessage('Vennligst fyll inn navn og e-post.', 'error');
-    return;
-  }
+    if (!navn || !kontaktinfo) {
+      showFormMessage('Vennligst fyll inn navn og telefon/e-post.', 'error');
+      return;
+    }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(epost)) {
-    showFormMessage('Vennligst oppgi en gyldig e-postadresse.', 'error');
-    return;
-  }
+    // Simulate send (replace with real endpoint later)
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sender…';
+    btn.disabled = true;
 
-  // Simulate send (replace with real endpoint later)
-  const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Sender…';
-  btn.disabled = true;
-
-  setTimeout(() => {
-    showFormMessage('Takk! Jeg tar kontakt så snart som mulig.', 'success');
-    form.reset();
-    btn.textContent = 'Send melding';
-    btn.disabled = false;
-  }, 1200);
-});
+    setTimeout(() => {
+      showFormMessage('Takk! Jeg tar kontakt så snart som mulig.', 'success');
+      form.reset();
+      btn.textContent = 'Send og book samtale';
+      btn.disabled = false;
+    }, 1200);
+  });
+}
 
 function showFormMessage(text, type) {
+  if (!form) return;
   // Remove existing
   const existing = form.querySelector('.form__message');
   if (existing) existing.remove();
