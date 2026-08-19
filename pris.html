@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pris og booking – Med Innsikt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="hovedside.html" class="nav__logo">Med Innsikt</a>
+      <button class="nav__burger" id="burger" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="hovedside.html">Hjem</a></li>
+        <li><a href="sorgstotte.html">Sorgstøtte</a></li>
+        <li><a href="ommeg.html">Om meg</a></li>
+        <li><a href="pris.html">Pris</a></li>
+        <li><a href="pris.html#book" class="nav__cta">Book samtale</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Pris og booking</p>
+        <h1 class="section__title">Enkelt å ta kontakt</h1>
+        <p class="section__intro">
+          Prisen skal være tydelig, og veien inn skal være kort og trygg.
+        </p>
+      </div>
+    </section>
+
+    <section class="section services-content">
+      <div class="container services-grid">
+        <div class="services-card services-price">
+          <h2>Gratis førstesamtale</h2>
+          <p>
+            <strong>Ca. 30 minutter</strong>
+            En kort, uforpliktende samtale hvor vi blir litt kjent og finner ut om
+            tilbudet passer for deg.
+          </p>
+        </div>
+
+        <div class="services-card services-price">
+          <h2>Individuell sorgstøtte</h2>
+          <p>
+            <strong>45 minutter – 650 kr</strong>
+            Individuelle samtaler tilpasset deg og det du bærer på.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section kontakt" id="book">
+      <div class="container kontakt__container">
+        <div class="kontakt__text">
+          <p class="section__eyebrow">Book samtale</p>
+          <h2 class="section__title">La oss finne et tidspunkt</h2>
+          <p>
+            Skjemaet er kort med vilje – det skal ikke føles som et omfattende
+            inntaksskjema. Fyll ut det du kan, så tar jeg kontakt så raskt som mulig.
+          </p>
+          <div class="kontakt__info">
+            <div class="kontakt__info-item">
+              <span class="kontakt__icon">📧</span>
+              <a href="mailto:kontakt@hawzhinpalani.no">kontakt@hawzhinpalani.no</a>
+            </div>
+            <div class="kontakt__info-item">
+              <span class="kontakt__icon">📱</span>
+              <a href="tel:+4799999999">+47 999 99 999</a>
+            </div>
+            <div class="kontakt__info-item">
+              <span class="kontakt__icon">📍</span>
+              <span>Oslo og omegn</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="kontakt__form" id="kontaktForm" novalidate>
+          <div class="form__group">
+            <label for="navn">Navn</label>
+            <input type="text" id="navn" name="navn" placeholder="Ditt navn" required />
+          </div>
+          <div class="form__group">
+            <label for="kontaktinfo">Tlf / e-post</label>
+            <input type="text" id="kontaktinfo" name="kontaktinfo" placeholder="Telefonnummer eller e-post" required />
+          </div>
+          <div class="form__group">
+            <label for="kontaktmetode">Hvordan ønsker du å bli kontaktet?</label>
+            <select id="kontaktmetode" name="kontaktmetode">
+              <option value="">Velg</option>
+              <option value="telefon">Telefon</option>
+              <option value="sms">SMS</option>
+              <option value="epost">E-post</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="melding">Frivillig: noen få ord om hva du står i</label>
+            <textarea id="melding" name="melding" rows="4" placeholder="Helt valgfritt..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send og book samtale</button>
+          <p class="form__note">Alle henvendelser behandles konfidensielt.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <strong>Med Innsikt</strong>
+        <span>Individuell sorgstøtte · Hawe Palani</span>
+      </div>
+      <div class="footer__links">
+        <a href="hovedside.html">Hjem</a>
+        <a href="sorgstotte.html">Sorgstøtte</a>
+        <a href="ommeg.html">Om meg</a>
+        <a href="pris.html">Pris</a>
+        <a href="pris.html#book">Book samtale</a>
+      </div>
+      <p class="footer__copy">© 2026 Med Innsikt</p>
+    </div>
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
+
