@@ -1,115 +1,114 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om meg – Med Innsikt</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Les om Hawe Palani, faglig bakgrunn og Med Innsikt.">
+<title>Om meg | Med Innsikt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo">Med Innsikt</a>
-      <button class="nav__burger" id="burger" aria-label="Meny">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="sorgstotte.html">Sorgstøtte</a></li>
-        <li><a href="ommeg.html">Om meg</a></li>
-        <li><a href="pris.html">Pris</a></li>
-        <li><a href="pris.html#book" class="nav__cta">Book samtale</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <section class="section about-hero">
-      <div class="container">
-        <p class="section__eyebrow">Om meg</p>
-        <h1 class="section__title">Jeg heter Hawe</h1>
-        <p class="section__intro">
-          Mastergrad i klinisk psykologi. 11 års erfaring fra psykisk helsevern. Og en
-          forståelse av sorg som ikke bare kommer fra bøker og jobb.
-        </p>
-      </div>
-    </section>
-
-    <section class="section about-content">
-      <div class="container">
-        <div class="about-card">
-          <p>
-            Jeg heter Hawe Palani og har en mastergrad i klinisk psykologi og 11 års
-            erfaring fra psykisk helsevern. Gjennom arbeidet mitt har jeg møtt mennesker i
-            noen av livets mest sårbare perioder, blant annet innen akuttpsykiatri og
-            psykisk helsevern for barn og unge.
-          </p>
-          <p>
-            Jeg har også arbeidet med sorg og tap, blant annet gjennom sorggrupper for barn
-            og støtte til voksne og foreldre etter alvorlige tap.
-          </p>
-          <p>
-            Men mitt forhold til sorg er ikke bare faglig. Jeg har også kjent sorg på nært
-            hold i mitt eget liv. Det har gitt meg en dyp respekt for hvor forskjellig
-            mennesker sørger, hvor ensomt det kan føles, og hvor vanskelig det kan være når
-            omgivelsene forventer at man skal gå videre før man selv er klar.
-          </p>
-          <p>
-            Jeg brenner for å møte mennesker akkurat der de er. Ikke for å fjerne sorgen,
-            men for å gjøre det litt lettere å stå i den. Jeg tror på varme, faglighet og
-            ekte menneskelige møter med plass til både ordene, stillheten, tårene og alt
-            det som kan være vanskelig å forklare.
-          </p>
-        </div>
-
-        <div class="about-card about-card--accent">
-          <h2>Personlig erfaring</h2>
-          <p>
-            Min forståelse av sorg er ikke bare faglig – jeg har også kjent den på nært
-            hold i mitt eget liv. Det er ikke historien min som skal stå i sentrum her, men
-            jeg vil at du skal vite: Jeg kjenner ikke bare sorg fra bøker og jobb. Jeg vet
-            også noe om hvordan et tap kan forandre et menneskes liv.
-          </p>
-        </div>
-
-        <div class="about-card about-card--accent">
-          <h2>Faglig bakgrunn</h2>
-          <ul class="page-list">
-            <li>Mastergrad i klinisk psykologi</li>
-            <li>Mange års erfaring innen psykisk helsevern</li>
-            <li>Erfaring fra akuttpsykiatri</li>
-            <li>Erfaring fra psykisk helsevern for barn og unge</li>
-            <li>Erfaring med sorggrupper og støtte ved alvorlige tap</li>
-          </ul>
-        </div>
-
-        <div style="text-align: center; margin-top: var(--space-lg);">
-          <a href="pris.html#book" class="btn btn--primary">Book en gratis førstesamtale</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <strong>Med Innsikt</strong>
-        <span>Individuell sorgstøtte · Hawe Palani</span>
-      </div>
-      <div class="footer__links">
-        <a href="index.html">Hjem</a>
-        <a href="sorgstotte.html">Sorgstøtte</a>
-        <a href="ommeg.html">Om meg</a>
-        <a href="pris.html">Pris</a>
-        <a href="pris.html#book">Book samtale</a>
-      </div>
-      <p class="footer__copy">© 2026 Med Innsikt</p>
-    </div>
-  </footer>
-
-  <script src="javascript.js"></script>
+<header class="site-header" id="nav">
+<div class="container nav__inner">
+<a class="brand" href="index.html">
+<span class="brand__mark">mi</span>
+<span>Med Innsikt</span>
+</a>
+<button class="nav__burger" id="burger" aria-label="Åpne meny" aria-expanded="false">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav class="nav__links" id="navLinks">
+<a href="index.html">Hjem</a>
+<a href="forsta-sorgen.html">Forstå sorgen</a>
+<a href="ulike-tap.html">Ulike tap</a>
+<a href="samtaler.html">Samtaler</a>
+<a href="ommeg.html">Om meg</a>
+<a class="nav__cta" href="samtaler.html#book">Book samtale</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="section section--clay">
+<div class="container page-intro">
+<p class="eyebrow">Om Med Innsikt</p>
+<h1>Jeg har møtt mange mennesker i noen av livets mest sårbare perioder.</h1>
+<p class="lede">Med Innsikt ble til fordi jeg ønsket å skape et sted med lavere terskel for mennesker i sorg som trenger kunnskap, støtte og et trygt rom for å snakke.</p>
+</div>
+</section>
+<section class="section section--paper">
+<div class="container split-section split-section--about">
+<div class="portrait">
+<img src="bilder/SON1907.jpg" alt="Hawe Palani" />
+</div>
+<div>
+<p>Jeg heter Hawe Palani og har mastergrad i klinisk psykologi og 11 års erfaring fra psykisk helsevern. Gjennom årene har jeg blant annet arbeidet i akuttpsykiatri og psykisk helsevern for barn og unge.</p>
+<p>Jeg har også erfaring med sorggrupper og støtte til mennesker etter alvorlige tap. Jeg kjenner sorg fra mitt eget liv. Det gjør ikke min sorg lik din, men det har gitt meg en dyp respekt for hvor grunnleggende et tap kan forandre et menneske.</p>
+<p>Min rolle her er å tilby samtalestøtte, kunnskap om vanlige sorgreaksjoner og konkrete verktøy for å stå i en krevende livsfase.</p>
+</div>
+</div>
+</section>
+<section class="section section--sage">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">Faglig bakgrunn</p>
+<h2>Presis kompetanse. Menneskelig møte.</h2>
+</div>
+<div class="article-grid">
+<div class="article-card">
+<span>01</span>
+<h3>Utdanning</h3>
+<p>Mastergrad i klinisk psykologi.</p>
+</div>
+<div class="article-card">
+<span>02</span>
+<h3>Erfaring</h3>
+<p>11 års erfaring fra psykisk helsevern, inkludert akuttpsykiatri.</p>
+</div>
+<div class="article-card">
+<span>03</span>
+<h3>Sorg og tap</h3>
+<p>Erfaring med sorggrupper og støtte etter alvorlige tap, også for barn og unge.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section--dark">
+<div class="container final-cta">
+<p class="eyebrow">Neste steg</p>
+<h2>Du trenger ikke ha en ferdig forklaring.</h2>
+<p>Vi kan begynne der du er.</p>
+<a class="button button--light" href="samtaler.html#book">Book en gratis førstesamtale</a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer__grid">
+<div>
+<a class="brand brand--dark" href="index.html">
+<span class="brand__mark">mi</span>
+<span>Med Innsikt</span>
+</a>
+<p>Samtalestøtte for deg som har mistet noen du er glad i.</p>
+</div>
+<div>
+<p class="footer__label">Utforsk</p>
+<a href="forsta-sorgen.html">Forstå sorgen</a>
+<a href="ulike-tap.html">Ulike tap</a>
+<a href="samtaler.html">Samtaler</a>
+</div>
+<div>
+<p class="footer__label">Kontakt</p>
+<a href="mailto:kontakt@hawzhinpalani.no">kontakt@hawzhinpalani.no</a>
+<span>Oslo og omegn</span>
+</div>
+<p class="footer__copy">© 2026 Med Innsikt · Personvern</p>
+</div>
+</footer>
+<script src="javascript.js"></script>
 </body>
 </html>
