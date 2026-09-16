@@ -1,140 +1,65 @@
-/* ============================
-   HAWE PALANI — javascript.js
-   ============================ */
-
-// --- NAV SCROLL STATE ---
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
-
-// --- MOBILE BURGER MENU ---
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
 
-burger.addEventListener('click', () => {
+window.addEventListener('scroll', () => {
+  nav?.classList.toggle('scrolled', window.scrollY > 24);
+}, { passive: true });
+
+burger?.addEventListener('click', () => {
   const open = navLinks.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open);
-  // Animate burger to X
-  const spans = burger.querySelectorAll('span');
-  if (open) {
-    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-  } else {
-    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-  }
+  burger.setAttribute('aria-expanded', String(open));
+  burger.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
 });
 
-// Close menu on nav link click (mobile)
-navLinks.querySelectorAll('a').forEach(link => {
+navLinks?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    burger.setAttribute('aria-expanded', false);
-    const spans = burger.querySelectorAll('span');
-    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    burger?.setAttribute('aria-expanded', 'false');
+    burger?.setAttribute('aria-label', 'Åpne meny');
   });
 });
 
-// --- SCROLL FADE-IN ANIMATIONS ---
-const fadeEls = document.querySelectorAll(
-  '.om__grid, .tilbud__card, .natur__container, .terskel__inner, .kontakt__container, .pullquote, .om__card'
-);
-
-fadeEls.forEach(el => el.classList.add('fade-up'));
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+const animated = document.querySelectorAll('.topic-card, .article-card, .split-section, .final-cta');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, entry.target.dataset.delay || 0);
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12 });
-
-// Stagger tilbud cards
-document.querySelectorAll('.tilbud__card').forEach((el, i) => {
-  el.dataset.delay = i * 80;
-});
-document.querySelectorAll('.om__card').forEach((el, i) => {
-  el.dataset.delay = i * 60;
+animated.forEach(element => {
+  element.classList.add('fade-up');
+  observer.observe(element);
 });
 
-fadeEls.forEach(el => observer.observe(el));
-
-// --- BOOKING FORM ---
 const form = document.getElementById('kontaktForm');
-
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const navn = form.querySelector('#navn').value.trim();
-    const kontaktinfoEl = form.querySelector('#kontaktinfo');
-    const kontaktinfo = kontaktinfoEl ? kontaktinfoEl.value.trim() : '';
-
-    if (!navn || !kontaktinfo) {
-      showFormMessage('Vennligst fyll inn navn og telefon/e-post.', 'error');
-      return;
-    }
-
-    // Simulate send (replace with real endpoint later)
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sender…';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      showFormMessage('Takk! Jeg tar kontakt så snart som mulig.', 'success');
-      form.reset();
-      btn.textContent = 'Send og book samtale';
-      btn.disabled = false;
-    }, 1200);
-  });
-}
-
-function showFormMessage(text, type) {
-  if (!form) return;
-  // Remove existing
+form?.addEventListener('submit', event => {
+  event.preventDefault();
+  const name = form.querySelector('#navn')?.value.trim();
+  const contact = form.querySelector('#kontaktinfo')?.value.trim();
+  const button = form.querySelector('button');
   const existing = form.querySelector('.form__message');
-  if (existing) existing.remove();
+  existing?.remove();
 
-  const msg = document.createElement('p');
-  msg.className = 'form__message';
-  msg.textContent = text;
-  msg.style.cssText = `
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 0.65rem 1rem;
-    border-radius: 8px;
-    text-align: center;
-    background: ${type === 'success' ? '#E8F4F0' : '#FDE8E8'};
-    color: ${type === 'success' ? '#2D4A3E' : '#7B2020'};
-    border: 1px solid ${type === 'success' ? '#B5D9CE' : '#F5C6C6'};
-  `;
-  form.appendChild(msg);
-
-  if (type === 'success') {
-    setTimeout(() => msg.remove(), 6000);
+  if (!name || !contact) {
+    showFormMessage('Fyll inn navn og telefon eller e-post.', false);
+    return;
   }
+
+  button.disabled = true;
+  button.textContent = 'Takk, forespørselen er sendt';
+  showFormMessage('Jeg tar kontakt så snart som mulig.', true);
+  form.reset();
+});
+
+function showFormMessage(text, success) {
+  if (!form) return;
+  const message = document.createElement('p');
+  message.className = 'form__message';
+  message.textContent = text;
+  message.style.cssText = `padding: 10px 0; color: ${success ? '#dce8d9' : '#ffe0d4'};`;
+  form.appendChild(message);
 }
 
-// --- SMOOTH ACTIVE NAV HIGHLIGHT ---
-const sections = document.querySelectorAll('section[id]');
-const navLinkEls = document.querySelectorAll('.nav__links a[href^="#"]');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinkEls.forEach(a => {
-        a.style.color = a.getAttribute('href') === `#${id}`
-          ? 'var(--clr-forest-deep)'
-          : '';
-      });
-    }
-  });
-}, { threshold: 0.4 });
-
-sections.forEach(s => sectionObserver.observe(s));
