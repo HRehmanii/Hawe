@@ -133,6 +133,7 @@ img { display: block; max-width: 100%; }
 .contact-form--light .form__note { color: #435148 !important; }
 .section--sage .contact-form--light .prototype-warning { color: #4a3b1a; }
 .prototype-warning { padding: 12px 14px; background: #fff3d8; color: #4a3b1a; font-size: .85rem; line-height: 1.5; }
+.booking p.prototype-warning { color: #4a3b1a; }
 .prototype-form .form__message { padding-top: 8px; font-size: .9rem; color: inherit; }
 .contact-form :focus-visible, .button:focus-visible, a:focus-visible { outline: 3px solid #bc8053; outline-offset: 3px; }
 
@@ -181,5 +182,6 @@ img { display: block; max-width: 100%; }
   .footer__grid > div:first-child { grid-column: auto; }
   .footer__copy { grid-column: auto; }
 }
+
 
 
