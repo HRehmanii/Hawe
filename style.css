@@ -117,7 +117,7 @@ img { display: block; max-width: 100%; }
 
 .booking { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 8vw, 110px); align-items: start; }
 .booking h2 { font-size: clamp(2.5rem, 4vw, 4.2rem); margin-bottom: 22px; }
-.booking p:not(.eyebrow) { color: #e4ece1; margin-bottom: 20px; }
+.booking p:not(.eyebrow) { color: #26312c; margin-bottom: 20px; }
 .contact-line a { color: var(--white); border-bottom: 1px solid rgba(255, 255, 255, .5); }
 .contact-form { display: flex; flex-direction: column; gap: 17px; padding: 26px; background: rgba(255, 253, 248, .12); }
 .contact-form label { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--white); }
