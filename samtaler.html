@@ -56,27 +56,37 @@
 </div>
 </div>
 </section>
+<section class="section section--paper">
+<div class="container section-heading">
+<p class="eyebrow">Hva YAD tilbyr</p>
+<h2>Det er ikke alltid lett å sette ord på sorg.</h2>
+<p>Noen ganger er det savnet som fyller mest. Andre ganger er det skyldfølelse, sinne, ensomhet eller tanker man ikke helt forstår.</p>
+<p>I samtalene er det rom for alt dette. Vi tar utgangspunkt i din historie, det som opptar deg, og det du ønsker å forstå eller få støtte til.</p>
+</div>
+</section>
 <section class="section section--clay">
 <div class="container">
 <div class="section-heading">
 <p class="eyebrow">Praktisk</p>
-<h2>Slik fungerer tilbudet.</h2>
+<h2>Sorg følger ingen bestemt tidsplan. Det gjør ikke samtalene våre heller.</h2>
+<p>YAD tilbyr i første omgang et individuelt forløp med seks digitale samtaler på 60 minutter, fordelt over tre måneder. Vi møtes annenhver uke. Hva vi snakker om, og hvordan vi bruker tiden, tar utgangspunkt i det som er viktig for deg.</p>
+<p>Før oppstart har vi en gratis og uforpliktende avklaringssamtale for å bli litt kjent og finne ut om tilbudet passer for deg.</p>
 </div>
 <div class="article-grid">
 <div class="article-card">
 <span>01 · Første steg</span>
 <h3>Gratis avklaringssamtale</h3>
-<p>Alle som søker, får først tilbud om en gratis og uforpliktende digital samtale.</p>
+<p>Før oppstart blir vi litt kjent og finner ut om tilbudet passer for deg.</p>
 </div>
 <div class="article-card">
 <span>02 · Oppstartstilbud</span>
-<h3>Seks plasser</h3>
-<p>Tilbudet starter med seks deltakere. Hver person får seks digitale samtaler på 60 minutter.</p>
+<h3>Individuelt forløp</h3>
+<p>Et individuelt digitalt forløp med seks samtaler på 60 minutter.</p>
 </div>
 <div class="article-card">
 <span>03 · Tidsramme</span>
 <h3>Annenhver uke i tre måneder</h3>
-<p>Samtalene gjennomføres digitalt annenhver uke. Pris og betalingsinformasjon kommer når dette er avklart.</p>
+<p>Seks samtaler fordelt over tre måneder, med én samtale annenhver uke.</p>
 </div>
 </div>
 </div>
@@ -84,31 +94,8 @@
 <section class="section section--paper">
 <div class="container section-heading">
 <p class="eyebrow">Pris og betaling</p>
-<h2>Informasjon kommer når den er avklart.</h2>
-<p>Pris og betalingsløsning er ikke bestemt ennå. De blir oppgitt tydelig før du eventuelt takker ja til oppstart.</p>
-</div>
-</section>
-<section class="section section--sage" id="venteliste">
-<div class="container booking">
-<div>
-<p class="eyebrow">Venteliste · prototype</p>
-<h2>Når alle seks plassene er fylt</h2>
-<p>Da kan nye søkere melde interesse for venteliste. Skjemaet vises her for gjennomgang; på den ferdige nettsiden skal det først åpnes når alle seks plassene er fylt. Denne prototypen oppretter ikke en venteliste og sender ingen beskjed.</p>
-</div>
-<form class="contact-form contact-form--light prototype-form" id="ventelisteForm">
-<p class="prototype-warning">Prototype: Ikke skriv inn ekte personopplysninger. Ingenting blir sendt eller lagret.</p>
-<label for="ventelisteNavn">Navn
-<input id="ventelisteNavn" name="navn" type="text" autocomplete="name" required>
-</label>
-<label for="ventelisteEpost">E-post
-<input id="ventelisteEpost" name="epost" type="email" autocomplete="email" required>
-</label>
-<label for="ventelisteTelefon">Telefon (valgfritt)
-<input id="ventelisteTelefon" name="telefon" type="tel" autocomplete="tel">
-</label>
-<button class="button button--dark" type="submit">Vis prototype</button>
-<p class="form__note">Ventelisten må kobles til en sikker løsning før nettsiden publiseres med aktiv påmelding.</p>
-</form>
+<h2>Pris og betalingsinformasjon før oppstart.</h2>
+<p>Eventuell pris og betalingsløsning blir oppgitt tydelig før du eventuelt takker ja til oppstart.</p>
 </div>
 </section>
 <section class="section section--dark" id="book">
@@ -132,4 +119,46 @@
 <label for="telefon">Telefon (valgfritt)
 <input id="telefon" name="telefon" type="tel" autocomplete="tel">
 </label>
-<label 
+<label for="henvendelse">Hva gjelder forespørselen?
+<select id="henvendelse" name="henvendelse" required>
+<option value="">Velg et alternativ</option>
+<option value="sorgstotte">Søknad om sorgstøtte</option>
+<option value="avklaringssamtale">Gratis avklaringssamtale</option>
+</select>
+</label>
+<label for="kortOmSituasjonen">Kort om hva du står i (valgfritt)
+<textarea id="kortOmSituasjonen" name="kortOmSituasjonen" rows="3"></textarea>
+</label>
+<p class="application-intro">Fortell kort hva du står i, så tar jeg kontakt for en uforpliktende avklaringssamtale. Du bestemmer selv hvor mye du ønsker å dele i første omgang.</p>
+<button class="button button--light" type="submit">Søk om sorgstøtte</button>
+<p class="form__note">Ikke del detaljer om sorg, helse eller andre sensitive forhold her. Se <a href="personvern.html">personvernutkastet</a>.</p>
+</form>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer__grid">
+<div>
+<a class="brand brand--dark" href="index.html">
+
+<span>YAD</span>
+</a>
+<p>Samtalestøtte for deg som har mistet noen du er glad i.</p>
+</div>
+<div>
+<p class="footer__label">Utforsk</p>
+<a href="forsta-sorgen.html">Forstå sorgen</a>
+<a href="ulike-tap.html">Ulike tap</a>
+<a href="ommeg.html">Om meg</a>
+</div>
+<div>
+<p class="footer__label">Kontakt</p>
+<a href="mailto:Hawesamtaler@gmail.com">Hawesamtaler@gmail.com</a>
+<span>Digitale samtaler over hele Norge</span>
+</div>
+<p class="footer__copy">© 2026 YAD · <a href="personvern.html">Personvern</a></p>
+</div>
+</footer>
+<script src="javascript.js"></script>
+</body>
+</html>
